@@ -1,7 +1,6 @@
 
 import Link from 'next/link'
 
-
 export default function Navbar() {
   return (
     <>
@@ -32,7 +31,8 @@ export default function Navbar() {
         <a href="#" className="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
       </div>
     </nav>
-    <div className="lg:hidden" role="dialog" aria-modal="true">
+   {/* lg:hidden */}
+    <div className="hidden" role="dialog" aria-modal="true"> 
       <div className="fixed inset-0 z-50"></div>
       <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div className="flex items-center justify-between">

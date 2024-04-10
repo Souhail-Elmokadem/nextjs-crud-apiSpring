@@ -1,7 +1,6 @@
 "use client"
 import React, { useContext, useState } from 'react'
 import { fetchcreators } from '../helpers/api'
-import { useRouter } from 'next/router';
 import creatorContext from '../helpers/creatorsContext';
 
 export default function DialogModel({ creatorId, name}) {
@@ -24,7 +23,7 @@ export default function DialogModel({ creatorId, name}) {
             // Close the modal after deletion
             setActive(false);
             const dataa = await fetchcreators();
-            setCreators(dataa);
+            setCreators(dataa.items);
             
         } catch (error) {
             console.error('Error deleting user:', error);

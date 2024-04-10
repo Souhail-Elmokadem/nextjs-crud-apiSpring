@@ -10,7 +10,8 @@ export const fetchdata = async () => {
 export const fetchpost = async (name) => {
     try {
         const response = await fetchdata();
-        return response.filter(item => item.slug === name)[0];
+        const res = await response.json();
+        return res.items.filter(item => item.slug === name)[0];
     } catch (error) {
         console.error(error);
     }
@@ -19,7 +20,8 @@ export const fetchpost = async (name) => {
 export const fetchcreators = async () => {
     try {
         const response = await fetch("http://localhost:8089/api/allCreators");
-        return response.json();
+        const res = await response.json();
+        return res;
     } catch (error) {
         console.error(error);
     }
@@ -27,9 +29,19 @@ export const fetchcreators = async () => {
 export const fetchcreator = async (id) => {
     try {
         const response = await fetchcreators();
-        return response.filter(item => item.id == id)[0];
+        return response.items.filter(item => item.id == id)[0];
     } catch (error) {
         console.error(error);
     }
 }
+// export const fetchnumberpages = async (id) => {
+//     try {
+//         const response = await fetch("http://localhost:8089/api/allCreators");
+//         const res = await response.json();
+//         return res.totalPages;
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+
 

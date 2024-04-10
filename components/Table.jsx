@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 
 export default  function Table({data}) {
 
+    
     return (
         <>
             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400" style={{ minWidth: '950px' }}>

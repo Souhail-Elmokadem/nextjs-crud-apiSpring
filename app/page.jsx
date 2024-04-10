@@ -11,7 +11,6 @@ export default async function Page() {
         <Hero>
             <ChildHeroCont title="Home" banner={true} content="Using useEffect to run on the client only"/>
         </Hero>
-       
     </>
     );
   }
